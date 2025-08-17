@@ -1,70 +1,165 @@
-# Getting Started with Create React App
+# Little Lemon Restaurant Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive web application for the Little Lemon Mediterranean restaurant in Chicago. Built with React and featuring semantic HTML, client-side validation, and comprehensive unit tests.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Responsive Design**: Optimized for both mobile and desktop devices
+- **Semantic HTML**: Proper use of semantic tags for accessibility
+- **Client-side Validation**: Comprehensive form validation with user feedback
+- **State Management**: Parent component manages available times state
+- **Unit Tests**: Full test coverage for form components and validation
+- **Modern UI/UX**: Clean, professional design following modern design principles
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+src/
+├── Components/
+│   ├── LittleLemon.js          # Main app component
+│   ├── BookingForm.js          # Reservation form component
+│   ├── Hero.js                 # Hero section component
+│   ├── Specials.js             # Special dishes showcase
+│   ├── Testimonials.js         # Customer reviews
+│   ├── About.js                # Restaurant story
+│   ├── Footer.js               # Footer with navigation
+│   ├── __tests__/
+│   │   └── BookingForm.test.js # Unit tests
+│   └── *.css                   # Component stylesheets
+├── App.js                      # Main app entry point
+└── index.js                    # React root
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technical Requirements Met
 
-### `npm test`
+### ✅ UI/UX Design
+- Modern, professional restaurant website design
+- Responsive layout for all device sizes
+- Consistent color scheme and typography
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ✅ Semantic HTML
+- Proper use of `<section>`, `<article>`, `<nav>`, `<main>`, `<footer>`
+- ARIA labels and roles for accessibility
+- Semantic form structure with proper labels
 
-### `npm run build`
+### ✅ Responsive Design
+- Mobile-first approach with CSS Grid and Flexbox
+- Media queries for breakpoints at 768px and 480px
+- Optimized layouts for mobile, tablet, and desktop
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ✅ Meta Tags & Open Graph Protocol
+- Comprehensive meta tags for SEO
+- Open Graph Protocol tags for social media sharing
+- Twitter Card support
+- Proper viewport and theme-color settings
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ✅ Component Architecture
+- `BookingForm` is a child component
+- Parent component (`LittleLemon`) manages available times state
+- Props passed down for state management
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### ✅ Form Validation
+- Client-side validation for all form fields
+- Real-time error feedback
+- Validation for email, phone, date, and required fields
+- User-friendly error messages
 
-### `npm run eject`
+### ✅ Unit Testing
+- Comprehensive test suite for `BookingForm` component
+- Tests for form rendering, validation, and submission
+- Mock functions for external dependencies
+- High test coverage for all functionality
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm or yarn package manager
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd portfolio
+```
 
-## Learn More
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Start the development server:
+```bash
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Code Splitting
+### Running Tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm test
+```
 
-### Analyzing the Bundle Size
+This will run the test suite and show coverage information.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Building for Production
 
-### Making a Progressive Web App
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Key Components
 
-### Advanced Configuration
+### LittleLemon (Parent Component)
+- Manages the `availableTimes` state
+- Provides `updateTimes` function to child components
+- Coordinates all restaurant sections
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### BookingForm (Child Component)
+- Receives `availableTimes` and `updateTimes` as props
+- Implements comprehensive client-side validation
+- Handles form submission and success states
+- Updates parent component when date changes
 
-### Deployment
+## Validation Rules
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Date**: Required, cannot be in the past
+- **Time**: Required, must be from available times
+- **Guests**: Required, must be between 1-10
+- **Name**: Required, minimum 2 characters
+- **Email**: Required, must be valid email format
+- **Phone**: Required, must be valid phone number format
 
-### `npm run build` fails to minify
+## Accessibility Features
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Semantic HTML structure
+- ARIA labels and descriptions
+- Keyboard navigation support
+- Focus indicators
+- Screen reader friendly content
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests for new functionality
+5. Ensure all tests pass
+6. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For questions or support, please contact the development team.
