@@ -1,14 +1,16 @@
 /* Booking Form Styles */
 .booking-section {
   padding: 4rem 0;
-  background-color: #f8f9fa;
+  background-color: var(--highlight-light);
 }
 
 .booking-section h2 {
   text-align: center;
   margin-bottom: 2rem;
-  color: #495e57;
+  color: var(--primary-green);
   font-size: 2.5rem;
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
 }
 
 .booking-form {
@@ -35,7 +37,9 @@
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #495e57;
+  color: var(--primary-green);
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
 }
 
 .form-group input,
@@ -45,13 +49,21 @@
   border: 2px solid #e0e0e0;
   border-radius: 4px;
   font-size: 1rem;
+  font-family: 'Karla', sans-serif;
   transition: border-color 0.3s ease;
+  background-color: white;
 }
 
 .form-group input:focus,
 .form-group select:focus {
-  border-color: #f4ce14;
+  border-color: var(--primary-yellow);
   outline: none;
+}
+
+.form-group input:hover,
+.form-group select:hover {
+  border-color: var(--primary-yellow);
+  box-shadow: 0 2px 4px rgba(244, 206, 20, 0.1);
 }
 
 .form-group input.error,
@@ -69,18 +81,21 @@
 .submit-btn {
   width: 100%;
   padding: 1rem;
-  background-color: #f4ce14;
-  color: #333;
+  background-color: var(--primary-yellow);
+  color: var(--highlight-dark);
   border: none;
   border-radius: 4px;
   font-size: 1.1rem;
   font-weight: 600;
+  font-family: 'Karla', sans-serif;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
   background-color: #e6c200;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(244, 206, 20, 0.3);
 }
 
 .submit-btn:focus {

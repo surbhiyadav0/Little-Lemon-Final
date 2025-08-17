@@ -1,8 +1,30 @@
-/* Little Lemon App Styles */
+/* Little Lemon App Styles - Following Brand Style Guide */
 .little-lemon-app {
   font-family: 'Markazi Text', 'Karla', serif;
   line-height: 1.6;
-  color: #333;
+  color: var(--highlight-dark);
+}
+
+/* Typography Scale from Style Guide */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+  color: var(--primary-green);
+}
+
+p, span, div, label, input, select, textarea, button {
+  font-family: 'Karla', sans-serif;
+  color: var(--highlight-dark);
+}
+
+/* Brand Colors from Style Guide */
+:root {
+  --primary-green: #485E57;
+  --primary-yellow: #F4CE14;
+  --secondary-orange: #EE8972;
+  --secondary-peach: #FEDABB;
+  --highlight-light: #EDEFEE;
+  --highlight-dark: #333333;
 }
 
 .container {
@@ -42,7 +64,7 @@ button:focus,
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 2px solid #f4ce14;
+  outline: 2px solid var(--primary-yellow);
   outline-offset: 2px;
 }
 

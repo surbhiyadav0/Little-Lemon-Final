@@ -47,7 +47,7 @@ function Testimonials() {
               <div className="testimonial-header">
                 <img 
                   src={testimonial.image} 
-                  alt={`${testimonial.name}'s profile picture`}
+                  alt={`${testimonial.name}'s profile`}
                   width="60"
                   height="60"
                   className="testimonial-avatar"

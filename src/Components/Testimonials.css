@@ -1,14 +1,16 @@
 /* Testimonials Section Styles */
 .testimonials {
   padding: 4rem 0;
-  background-color: #f8f9fa;
+  background-color: var(--highlight-light);
 }
 
 .testimonials h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #495e57;
+  color: var(--primary-green);
   margin-bottom: 3rem;
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
 }
 
 .testimonials-grid {
@@ -30,6 +32,14 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
+.testimonial-avatar {
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover .testimonial-avatar {
+  transform: scale(1.1);
+}
+
 .testimonial-header {
   display: flex;
   align-items: center;
@@ -44,12 +54,14 @@
 
 .testimonial-info h3 {
   font-size: 1.25rem;
-  color: #495e57;
+  color: var(--primary-green);
   margin: 0 0 0.5rem 0;
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
 }
 
 .rating {
-  color: #f4ce14;
+  color: var(--primary-yellow);
   font-size: 1.1rem;
   letter-spacing: 2px;
 }
@@ -64,6 +76,9 @@
 .testimonial-card blockquote p {
   margin: 0;
   font-size: 1rem;
+  font-family: 'Karla', sans-serif;
+  color: var(--highlight-dark);
+  line-height: 1.6;
 }
 
 /* Responsive Design */
