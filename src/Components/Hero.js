@@ -2,6 +2,8 @@ import React from 'react';
 import './Hero.css';
 
 function Hero() {
+  console.log('Hero component rendering'); // Debug log
+  
   return (
     <section className="hero" aria-labelledby="hero-title">
       <div className="hero-content">
@@ -28,12 +30,10 @@ function Hero() {
           </div>
         </div>
         <div className="hero-image">
-          <img 
-            src="/restaurant-hero.jpg" 
-            alt="Delicious Mediterranean dishes at Little Lemon restaurant"
-            width="500"
-            height="400"
-          />
+          <div className="image-placeholder">
+            <div className="placeholder-icon">🍋</div>
+            <p>Restaurant Image</p>
+          </div>
         </div>
       </div>
     </section>

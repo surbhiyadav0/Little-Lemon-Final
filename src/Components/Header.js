@@ -4,6 +4,8 @@ import './Header.css';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  console.log('Header component rendering'); // Debug log
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

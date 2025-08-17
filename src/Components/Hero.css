@@ -140,6 +140,36 @@
   transform: scale(1.02);
 }
 
+.image-placeholder {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  background: linear-gradient(135deg, var(--secondary-peach) 0%, var(--secondary-orange) 100%);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.image-placeholder:hover {
+  transform: scale(1.02);
+}
+
+.placeholder-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.image-placeholder p {
+  color: var(--primary-green);
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .hero-text h1 {
