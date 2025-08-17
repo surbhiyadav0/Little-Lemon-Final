@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import Hero from './Hero';
-import BookingForm from './BookingForm';
+import Menu from './Menu';
 import Specials from './Specials';
-import Testimonials from './Testimonials';
 import About from './About';
+import BookingForm from './BookingForm';
 import Footer from './Footer';
 import './LittleLemon.css';
 
@@ -29,8 +29,8 @@ function LittleLemon() {
       <Header />
       <main>
         <Hero />
+        <Menu />
         <Specials />
-        <Testimonials />
         <About />
         <section className="booking-section" aria-labelledby="booking-title">
           <div className="container">

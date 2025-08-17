@@ -1,0 +1,163 @@
+/* Menu Section Styles - Following Brand Style Guide */
+.menu-section {
+  padding: 4rem 0;
+  background-color: var(--highlight-light);
+}
+
+.menu-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.menu-header h2 {
+  font-size: 3rem;
+  color: var(--primary-green);
+  margin-bottom: 1rem;
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+}
+
+.menu-header p {
+  font-size: 1.2rem;
+  color: var(--highlight-dark);
+  font-family: 'Karla', sans-serif;
+  line-height: 1.6;
+}
+
+.menu-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.menu-category {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-category:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.category-title {
+  font-size: 2rem;
+  color: var(--primary-green);
+  margin-bottom: 1.5rem;
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+  text-align: center;
+  border-bottom: 2px solid var(--primary-yellow);
+  padding-bottom: 0.5rem;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.menu-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.item-name {
+  font-size: 1.25rem;
+  color: var(--primary-green);
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+  margin: 0;
+}
+
+.item-price {
+  font-size: 1.1rem;
+  color: var(--primary-yellow);
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+}
+
+.item-description {
+  font-size: 0.95rem;
+  color: var(--highlight-dark);
+  font-family: 'Karla', sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.menu-cta {
+  text-align: center;
+}
+
+.view-full-menu-btn {
+  background-color: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Karla', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.view-full-menu-btn:hover {
+  background-color: #3d4f47;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(72, 94, 87, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-header h2 {
+    font-size: 2.5rem;
+  }
+  
+  .menu-categories {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .menu-category {
+    padding: 1.5rem;
+  }
+  
+  .category-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-section {
+    padding: 2rem 0;
+  }
+  
+  .menu-header h2 {
+    font-size: 2rem;
+  }
+  
+  .menu-category {
+    padding: 1rem;
+  }
+  
+  .category-title {
+    font-size: 1.5rem;
+  }
+}
