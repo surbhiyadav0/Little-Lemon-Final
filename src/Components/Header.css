@@ -1,11 +1,11 @@
 /* Header Styles - Following Brand Style Guide Exactly */
 .header {
   background-color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 }
 
 .header-content {
@@ -17,7 +17,7 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -28,8 +28,9 @@
 
 .logo-icon {
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
 }
 
 .lemon-shape {
@@ -38,26 +39,26 @@
   background-color: var(--primary-yellow);
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   position: relative;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .leaf {
   position: absolute;
-  top: -6px;
-  right: -3px;
-  width: 16px;
-  height: 22px;
+  top: -8px;
+  right: -4px;
+  width: 20px;
+  height: 28px;
   background-color: var(--primary-green);
   border-radius: 50% 0 50% 50%;
   transform: rotate(-45deg);
 }
 
 .logo-text {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   color: var(--primary-green);
   font-family: 'Markazi Text', serif;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .nav-menu {
@@ -65,7 +66,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 2.5rem;
+  gap: 3rem;
 }
 
 .nav-menu li a {
@@ -74,9 +75,9 @@
   font-weight: 500;
   font-family: 'Karla', sans-serif;
   transition: all 0.3s ease;
-  padding: 0.5rem 0;
+  padding: 0.75rem 0;
   position: relative;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .nav-menu li a:hover {
@@ -90,7 +91,7 @@
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 3px;
   background-color: var(--primary-yellow);
   transition: width 0.3s ease;
 }
@@ -114,10 +115,10 @@
 }
 
 .hamburger {
-  width: 25px;
+  width: 28px;
   height: 3px;
   background-color: var(--primary-green);
-  margin: 3px 0;
+  margin: 4px 0;
   transition: 0.3s;
   border-radius: 2px;
 }
@@ -136,15 +137,15 @@
     background-color: white;
     flex-direction: column;
     gap: 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 12px 12px;
   }
   
   .nav-menu.open {
-    max-height: 400px;
+    max-height: 450px;
   }
   
   .nav-menu li {
@@ -158,35 +159,36 @@
   
   .nav-menu li a {
     display: block;
-    padding: 1rem 2rem;
+    padding: 1.25rem 2rem;
     border-bottom: 1px solid #f0f0f0;
     transition: all 0.3s ease;
     font-family: 'Karla', sans-serif;
+    font-size: 1.1rem;
   }
   
   .nav-menu li:last-child a {
     border-bottom: none;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 12px 12px;
   }
   
   .nav-menu li:first-child a {
     border-top: none;
-    border-radius: 8px 8px 0 0;
+    border-radius: 12px 12px 0 0;
   }
   
   .nav-menu li a:hover {
     background-color: var(--highlight-light);
     color: var(--primary-yellow);
-    padding-left: 2.5rem;
+    padding-left: 3rem;
     font-weight: 600;
-    box-shadow: inset 4px 0 0 var(--primary-yellow);
-    transform: translateX(4px);
+    box-shadow: inset 6px 0 0 var(--primary-yellow);
+    transform: translateX(6px);
     transition: all 0.3s ease;
   }
   
   .nav-menu li a:active {
-    transform: translateX(2px);
-    box-shadow: inset 2px 0 0 var(--primary-yellow);
+    transform: translateX(3px);
+    box-shadow: inset 3px 0 0 var(--primary-yellow);
     background-color: var(--primary-yellow);
     color: var(--highlight-dark);
     font-weight: 700;
@@ -194,8 +196,8 @@
   }
   
   .nav-menu li a:focus {
-    outline: 2px solid var(--primary-yellow);
-    outline-offset: -2px;
+    outline: 3px solid var(--primary-yellow);
+    outline-offset: -3px;
     background-color: var(--highlight-light);
     color: var(--primary-green);
     font-weight: 600;
@@ -205,8 +207,8 @@
   .nav-menu li a:focus:hover {
     background-color: var(--primary-yellow);
     color: var(--primary-green);
-    transform: translateX(4px);
-    box-shadow: inset 4px 0 0 var(--primary-green);
+    transform: translateX(6px);
+    box-shadow: inset 6px 0 0 var(--primary-green);
     font-weight: 700;
     transition: all 0.3s ease;
   }
@@ -214,25 +216,25 @@
 
 @media (max-width: 480px) {
   .header-content {
-    padding: 0.75rem 0;
+    padding: 1rem 0;
   }
   
   .logo-icon {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
   
   .leaf {
-    width: 13px;
-    height: 18px;
+    width: 16px;
+    height: 22px;
   }
   
   .logo-text {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
   }
   
   .nav-menu li a {
-    padding: 0.875rem 1.5rem;
+    padding: 1rem 1.5rem;
   }
 }
   

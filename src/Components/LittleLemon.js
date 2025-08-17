@@ -14,7 +14,6 @@ function LittleLemon() {
   ]);
 
   const updateTimes = (date) => {
-    // Simulate different available times based on date
     if (date.getDay() === 0) { // Sunday
       setAvailableTimes(['17:00', '18:00', '19:00']);
     } else if (date.getDay() === 6) { // Saturday

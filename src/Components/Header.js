@@ -4,8 +4,6 @@ import './Header.css';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
-  console.log('Header component rendering'); // Debug log
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -36,12 +34,12 @@ function Header() {
             </button>
             
             <ul className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
-              <li><a href="#home" onClick={() => setIsMenuOpen(false)}>Home</a></li>
-              <li><a href="#menu" onClick={() => setIsMenuOpen(false)}>Menu</a></li>
-              <li><a href="#specials" onClick={() => setIsMenuOpen(false)}>Specials</a></li>
-              <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About</a></li>
-              <li><a href="#reservations" onClick={() => setIsMenuOpen(false)}>Reservations</a></li>
-              <li><a href="#order-online" onClick={() => setIsMenuOpen(false)}>Order Online</a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#specials">Specials</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#reservations">Reservations</a></li>
+              <li><a href="#order-online">Order Online</a></li>
             </ul>
           </nav>
         </div>
